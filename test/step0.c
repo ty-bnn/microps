@@ -1,5 +1,4 @@
 #include "util.h"
-#include "test.h"
 
 int
 main(void)

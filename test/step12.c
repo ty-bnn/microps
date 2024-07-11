@@ -1,4 +1,3 @@
-#include <stdio.h>
 #include <stddef.h>
 #include <signal.h>
 #include <unistd.h>
@@ -6,7 +5,6 @@
 #include "util.h"
 #include "net.h"
 #include "ip.h"
-#include "icmp.h"
 
 #include "driver/loopback.h"
 #include "driver/ether_tap.h"
