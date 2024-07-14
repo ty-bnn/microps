@@ -361,10 +361,8 @@ ip_input(const uint8_t *data, size_t len, struct net_device *dev)
     debugf("dev=%s, ifaces=%s, protocol=%u, total=%u", dev->name, ip_addr_ntop(iface->unicast, addr, sizeof(addr)), hdr->protocol, total);
     ip_dump(data, total);
     
-    debugf("hello");
     for (proto = protocols; proto; proto = proto->next) {
         if (proto->type == hdr->protocol) {
-            debugf("hello");
             proto->handler((uint8_t *)hdr + hlen, total - hlen, hdr->src, hdr->dst, iface);
             return;
         }
